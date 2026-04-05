@@ -3,8 +3,10 @@
 > A learning roadmap and documentation site for JavaScript developers who want to systematically learn Python, Rust, and Solidity.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![GitHub Pages](https://img.shields.io/badge/Preview-GitHub%20Pages-blue)](https://heikunan.github.io/code-voyage/)
 
 - Repository: `code-voyage`
+- Preview: [https://heikunan.github.io/code-voyage/](https://heikunan.github.io/code-voyage/)
 - Description: `A roadmap and documentation site for JavaScript developers learning Python, Rust, and Solidity.`
 
 ## 中文简介
