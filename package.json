@@ -1,0 +1,15 @@
+{
+  "name": "code-voyage",
+  "version": "1.0.0",
+  "description": "A roadmap and documentation site for JavaScript developers learning Python, Rust, and Solidity.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  }
+}

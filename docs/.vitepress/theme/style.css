@@ -1,0 +1,68 @@
+.VPDoc .custom-block {
+  border-radius: 14px;
+}
+
+.VPDoc table {
+  display: table;
+  width: 100%;
+  margin: 20px 0 28px;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.VPDoc table thead tr {
+  background: var(--vp-c-bg-soft);
+}
+
+.VPDoc table th,
+.VPDoc table td {
+  padding: 12px 14px;
+}
+
+.VPDoc .overview-page h2 {
+  margin-top: 28px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.VPDoc .overview-page h3 {
+  margin-top: 24px;
+  font-size: 1.1rem;
+}
+
+.VPDoc .overview-page blockquote {
+  margin: 20px 0;
+  padding: 14px 18px;
+  border-left-width: 4px;
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+}
+
+.VPDoc .overview-page ul li,
+.VPDoc .overview-page ol li {
+  margin: 6px 0;
+}
+
+.VPDoc .landing-page h2 {
+  margin-top: 32px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.VPDoc .landing-page h3 {
+  margin-top: 24px;
+  font-size: 1.15rem;
+}
+
+.VPDoc .landing-page blockquote {
+  margin: 18px 0;
+  padding: 16px 18px;
+  border-left-width: 4px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--vp-c-bg-soft), transparent);
+}
+
+.VPDoc .landing-page ul li,
+.VPDoc .landing-page ol li {
+  margin: 6px 0;
+}
