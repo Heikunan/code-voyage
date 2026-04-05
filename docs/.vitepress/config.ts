@@ -1,4 +1,6 @@
 import { defineConfig } from "vitepress";
+import { MermaidMarkdown, MermaidPlugin } from "vitepress-plugin-mermaid";
+import path from "node:path";
 
 export default defineConfig({
   base: "/code-voyage/",
@@ -12,6 +14,42 @@ export default defineConfig({
       env: "dotenv",
       gitignore: "ini",
       yul: "solidity",
+    },
+    config(md) {
+      MermaidMarkdown(md);
+    },
+  },
+
+  vite: {
+    plugins: [
+      MermaidPlugin({
+        securityLevel: "loose",
+        startOnLoad: false,
+      }),
+    ],
+    optimizeDeps: {
+      include: [
+        "mermaid",
+        "@braintree/sanitize-url",
+        "dayjs",
+        "debug",
+        "cytoscape",
+        "cytoscape-cose-bilkent",
+        "dompurify",
+      ],
+    },
+    resolve: {
+      alias: [
+        { find: /^dayjs$/, replacement: path.resolve("node_modules/dayjs/esm/index.js") },
+        { find: "dayjs/plugin/advancedFormat.js", replacement: path.resolve("node_modules/dayjs/esm/plugin/advancedFormat/index.js") },
+        { find: "dayjs/plugin/customParseFormat.js", replacement: path.resolve("node_modules/dayjs/esm/plugin/customParseFormat/index.js") },
+        { find: "dayjs/plugin/isoWeek.js", replacement: path.resolve("node_modules/dayjs/esm/plugin/isoWeek/index.js") },
+        { find: "dayjs/plugin/duration.js", replacement: path.resolve("node_modules/dayjs/esm/plugin/duration/index.js") },
+        { find: "cytoscape/dist/cytoscape.umd.js", replacement: path.resolve("node_modules/cytoscape/dist/cytoscape.esm.mjs") },
+      ],
+    },
+    ssr: {
+      noExternal: ["mermaid"],
     },
   },
 
